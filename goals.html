@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FinFlow — Gamified Finance Tracking</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo-bubble">F</div>
+        <div class="brand-text">
+          <h1>FinFlow</h1>
+          <p class="tag">Turn finance into a game</p>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="features.html" class="nav-link">Features</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+         <a href="goals.html" class="nav-link active">Goals</a>
+        <a href="history.html" class="nav-link">History</a>
+    </nav>
+    </div>
+  </header>
+
+  <main class="container page-goals">
+    <section class="hero-card">
+      <div class="hero-left">
+        <h1>Goals & Saving Plans</h1>
+        <p class="lede">Create a savings goal and FinFlow will recommend how much you should save each month to hit it on time. Track progress and celebrate milestones.</p>
+      </div>
+      <div class="hero-right">
+        <img src="assets/img/goal-illustration.png" alt="" aria-hidden="true" class="hero-illustration">
+      </div>
+    </section>
+
+    <section class="card create-goal-card" aria-labelledby="create-goal-title">
+      <h2 id="create-goal-title">Create a Goal</h2>
+
+      <form id="goalForm" class="goal-form" autocomplete="off">
+        <div class="row">
+          <label class="sr-only" for="goalName">Goal name</label>
+          <input id="goalName" name="goalName" type="text" placeholder="Goal name (e.g., New Laptop)" required>
+
+          <label class="sr-only" for="goalAmount">Target amount</label>
+          <input id="goalAmount" name="goalAmount" type="number" placeholder="Target amount (₹)" min="1" required>
+
+          <label class="sr-only" for="goalDate">Target date</label>
+          <input id="goalDate" type="date" style="width:150px"/>
+
+          <button id="addGoal" class="btn btn-primary" type="submit">Create</button>
+        </div>
+
+        <p class="hint">Tip: choose a realistic timeline — FinFlow will suggest a monthly target automatically.</p>
+      </form>
+    </section>
+<br><br>
+    <section class="card goals-list-card" aria-labelledby="my-goals-title">
+      <h2 id="my-goals-title">My Goals</h2>
+      <div id="goalsContainer" class="goals-container" aria-live="polite"></div>
+
+      <div id="noGoals" class="no-goals">You don't have any goals yet — create one to get started.</div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <div class="footer-inner">
+      <p>© 2025 FinFlow</p>
+    </div>
+  </footer>
+
+  <script src="goals.js" defer></script>
+</body>
+</html>

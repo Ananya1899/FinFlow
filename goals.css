@@ -1,0 +1,114 @@
+/* Goals page styles — modular, matches premium dark UI */
+
+/* Utilities (if your main CSS already has them, these will be gentle) */
+.container { max-width:1160px; margin:0 auto; padding:0 20px; }
+
+/* Page-specific layout */
+.page-goals { padding: 40px 0 80px; color: var(--text-color, #eaeaea); }
+
+/* Hero card */
+.hero-card {
+  display:flex;
+  gap:22px;
+  align-items:center;
+  justify-content:space-between;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.45);
+  margin-bottom: 22px;
+}
+.hero-left h1 { margin: 0 0 6px; font-size: 24px; color: var(--primary, #c9a227); }
+.hero-left .lede { margin:0; font-size:14px; color: var(--muted, #9a9a9a); max-width:640px; }
+.hero-illustration { width:120px; opacity:0.95; }
+
+/* Cards */
+.card { background: var(--card-bg, #121212); border-radius:16px; padding:18px; margin-bottom: 18px; box-shadow: 0 10px 30px rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.03); }
+
+/* Create-goal form */
+.goal-form .row {
+  display:flex;
+  gap:12px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+.goal-form input[type="text"],
+.goal-form input[type="number"],
+.goal-form input[type="month"] {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  color: #fff;
+  padding:10px 12px;
+  border-radius: 10px;
+  min-width: 160px;
+  font-size:14px;
+  outline: none;
+  transition: box-shadow .18s ease, transform .12s ease;
+}
+.goal-form input:focus { box-shadow: 0 6px 18px rgba(0,0,0,0.6); transform: translateY(-2px); border-color: rgba(200,160,40,0.9); }
+.goal-form .hint { margin-top:10px; color:var(--muted,#9a9a9a); font-size:13px; }
+
+/* Goals list */
+.goals-container { display:flex; flex-direction:column; gap:12px; margin-top:12px; }
+.goal-item {
+  display:flex;
+  align-items:flex-start;
+  gap:14px;
+  padding:14px;
+  border-radius:12px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.03);
+  position:relative;
+}
+.goal-meta { flex:1; min-width:0; }
+.goal-title { font-weight:700; color:var(--primary,#c9a227); margin:0 0 6px; font-size:15px; }
+.goal-target { color:var(--muted,#9a9a9a); font-size:13px; margin:0 0 8px; }
+.goal-row { display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+
+/* Progress */
+.progress-wrap { width:100%; margin-top:8px; }
+.progress-track { height:12px; background: rgba(255,255,255,0.04); border-radius:999px; overflow:hidden; }
+.progress-fill {
+  height:100%;
+  background: linear-gradient(90deg, var(--primary,#c9a227), var(--accent,#d36f43));
+  width:0%;
+  transition: width 650ms cubic-bezier(.2,.9,.3,1);
+}
+.progress-stats { display:flex; justify-content:space-between; margin-top:8px; font-size:13px; color:var(--muted,#9a9a9a); }
+
+/* Controls */
+.goal-controls { display:flex; gap:8px; align-items:center; }
+.btn-ghost {
+  background:transparent;
+  border:1px solid rgba(255,255,255,0.06);
+  color:#fff;
+  padding:8px 10px;
+  border-radius:10px;
+  cursor:pointer;
+  font-size:13px;
+}
+.btn-small { padding:8px 10px; border-radius:10px; cursor:pointer; font-weight:600; }
+
+/* quick-add saved */
+.saved-row { display:flex; gap:8px; margin-left:auto; align-items:center; }
+.saved-row input[type="number"] {
+  width:110px; padding:8px; border-radius:8px; border:1px solid rgba(255,255,255,0.06); background: rgba(255,255,255,0.02); color:#fff;
+}
+
+/* achieved ribbon */
+.achieved {
+  position:absolute; right:12px; top:12px;
+  background: rgba(255,255,255,0.06);
+  color: var(--primary,#c9a227);
+  padding:6px 10px; border-radius:10px; font-weight:700; font-size:12px;
+}
+
+/* no goals message */
+.no-goals { margin-top:14px; color:var(--muted,#9a9a9a); }
+
+/* small screens */
+@media (max-width:820px) {
+  .hero-card { flex-direction:column; gap:12px; align-items:flex-start; }
+  .goal-form .row { flex-direction:column; align-items:stretch; }
+  .saved-row { margin-left:0; width:100%; justify-content:space-between; }
+}

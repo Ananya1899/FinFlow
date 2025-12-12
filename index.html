@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FinFlow — Gamified Finance Tracking</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo-bubble">F</div>
+        <div class="brand-text">
+          <h1>FinFlow</h1>
+          <p class="tag">Turn finance into a game</p>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="features.html" class="nav-link">Features</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+         <a href="goals.html" class="nav-link">Goals</a>
+        <a href="history.html" class="nav-link">History</a>
+    </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero with floating app mockups -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <h2 class="hero-title">Master your money — the fun way</h2>
+          <p class="lead">FinFlow gamifies budgeting and savings with XP, streaks, missions, and friendly nudges. Build better habits without judgement.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="features.html">Explore Features</a>
+          </div>
+
+          <ul class="quick-features">
+            <li>🎯 Levels & XP</li>
+            <li>📊 Smart insights</li>
+            <li>💡 Mood-aware nudges</li>
+            <li>🤝 Community challenges</li>
+          </ul>
+        </div>
+
+        <div class="hero-right">
+          <!-- Floating mockup (use the image you provided) -->
+          <div class="mockup-stage">
+            <img src="ff.jpg" alt="FinFlow mockup" class="mockup-img" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why FinFlow -->
+    <!-- <section class="section">
+      <div class="container">
+        <h3 class="section-title">Why FinFlow?</h3>
+        <div class="cards">
+          <article class="card">
+            <h4>Gamified Finance</h4>
+            <p>Earn XP, unlock badges, complete quests and level up your money habits.</p>
+          </article>
+
+          <article class="card">
+            <h4>Personalized Nudges</h4>
+            <p>AI-backed tips and mood-linked alerts that feel supportive, not shaming.</p>
+          </article>
+
+          <article class="card">
+            <h4>Simple Visuals</h4>
+            <p>Readable progress rings, clear budget meters and friendly celebrations.</p>
+          </article>
+        </div>
+      </div>
+    </section> -->
+<!-- Spend Input Box -->
+ <!-- Add Expense Section -->
+<section class="section">
+  <div class="container">
+    <h3 class="section-title">Add an Expense</h3>
+
+    <div class="expense-box">
+      <input type="text" id="expense-name" placeholder="Expense name (e.g., Food, Travel)">
+      <input type="number" id="expense-amount" placeholder="Amount (₹)">
+      <button id="add-expense-btn" class="btn btn-primary">Add Expense</button>
+    </div>
+
+    <div id="expense-list" class="expense-list">
+      <h4>Recent Expenses</h4>
+      <ul id="expense-items"></ul>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Quick Dashboard preview -->
+    <section class="section section-alt">
+      <div class="container">
+        <h3 class="section-title">Dashboard Preview</h3>
+        <div class="preview-grid">
+          <div class="mini-card">
+            <div class="mini-head">
+              <strong>XP</strong>
+              <span>Level 7</span>
+            </div>
+            <div class="progress small">
+              <div class="bar" style="width: 68%"></div>
+            </div>
+            <p class="muted">9,450 XP • Next level in 2,250 XP</p>
+          </div>
+
+          <div class="mini-card">
+            <div class="mini-head">
+              <strong>Streak</strong>
+              <span>🔥 7 days</span>
+            </div>
+            <p class="muted">Keep logging daily to maintain momentum</p>
+          </div>
+
+          <div class="mini-card">
+            <div class="mini-head">
+              <strong>Budget</strong>
+              <span>Under target</span>
+            </div>
+            <div class="progress small">
+              <div class="bar" style="width: 42%"></div>
+            </div>
+            <p class="muted">Food: ₹1,200 / ₹3,000</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+  </main> 
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 FinFlow • Designed for design thinking project</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

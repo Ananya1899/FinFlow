@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FinFlow — History</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header class="site-header small">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo-bubble">F</div>
+        <div class="brand-text"><h1>FinFlow</h1></div>
+      </div>
+      
+      <nav class="nav">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="features.html" class="nav-link">Features</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+         <a href="goals.html" class="nav-link">Goals</a>
+        <a href="history.html" class="nav-link active">History</a>
+    </nav>
+    </div>
+</header>
+
+<main class="section">
+    <div class="container">
+        <h2 class="section-title">Spending & Progress History</h2>
+
+        <!-- GRID OF CHARTS -->
+        <div class="history-grid">
+
+            <!-- Monthly Spending Bar Chart -->
+            <div class="history-card large">
+                <h3>Monthly Spending Comparison</h3>
+                <canvas id="monthlyBar"></canvas>
+            </div>
+
+            <!-- Category Pie Chart -->
+            <div class="history-card large">
+                <h3>Category Distribution</h3>
+                <canvas id="spendPie"></canvas>
+            </div>
+
+            <!-- XP Progress Chart -->
+            <div class="history-card large">
+                <h3>XP Progress Over Months</h3>
+                <canvas id="xpLine"></canvas>
+            </div>
+
+            <!-- Savings Goal History -->
+            <div class="history-card large">
+                <h3>Savings Goal Completion</h3>
+                <canvas id="savingsLine"></canvas>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2025 FinFlow</p>
+    </div>
+</footer>
+
+<script src="history.js"></script>
+</body>
+</html>
