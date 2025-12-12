@@ -65,6 +65,3 @@ FinFlow is a **static frontend web application** built with:
 | Vercel       | Deployment |
 
 ---
-
-## 🗂 Project Structure
-
